@@ -1,0 +1,26 @@
+query GetCalculations {
+  getCalculations {
+    CalculatorResponse {
+      cal_id
+      createdAt
+      operation
+      result
+      value1
+      value2
+    }
+  }
+}
+
+mutation SaveCalculations {
+  saveCalculations(operation: "add", value1: 100, value2: 200) {
+    CalculatorResponse {
+      cal_id
+      createdAt
+      operation
+      result
+      value1
+      value2
+    }
+  }
+}
+

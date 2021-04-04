@@ -1,0 +1,25 @@
+﻿schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Calculator {
+  cal_id: String
+  createdAt: String
+  operation: String
+  result: String
+  value1: String
+  value2: String
+}
+
+type CalculatorResponse {
+  CalculatorResponse: [Calculator]
+}
+
+type Mutation {
+  saveCalculations(operation: String!, value1: Int!, value2: Int!): CalculatorResponse
+}
+
+type Query {
+  getCalculations: CalculatorResponse
+}
